@@ -1,0 +1,20 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://e.coding.net/ihouqi/fe/cli.git",
+  "author": "cyh <1428899467@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "lerna clean",
+    "publish": "lerna publish from-package --registry http://10.0.0.200:4873 --force-publish -y"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "lerna": "^4.0.0",
+    "shelljs": "^0.8.4"
+  }
+}

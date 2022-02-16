@@ -1,0 +1,39 @@
+{
+  "name": "@houqi/cli",
+  "version": "1.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "keywords": [],
+  "author": "cyh <1428899467@qq.com>",
+  "license": "ISC",
+  "main": "lib/cli.js",
+  "bin": {
+    "houqi-cli": "bin/houqi-cli.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates"
+  ],
+  "publishConfig": {
+    "registry": "https://ihouqi-npm.pkg.coding.net/fe/private"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://e.coding.net/ihouqi/fe/cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@houqi/cli-utils": "workspace:^1.0.0",
+    "commander": "^8.1.0",
+    "envinfo": "^7.8.1",
+    "glob": "^7.2.0",
+    "leven": "^3.1.0",
+    "mkdirp": "^1.0.4"
+  }
+}
