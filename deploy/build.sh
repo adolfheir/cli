@@ -1,13 +1,8 @@
-yarn config set registry $NPM_REGISTER
+pnpm install
 
-yarn cache clean
+rm .npmrc  && mv ./deploy/private.npmrc ./.npmrc
 
-yarn
+pnpm run publish
 
-node ./deploy/npmLogin.js
-
-yarn run publish
-
-# while true; do echo houqi-web; sleep 1; done
 
 
