@@ -227,12 +227,12 @@ module.exports = (webpackEnv) => {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: require.resolve("babel-loader"),
             options: {
               babelrc: false,
               presets: [
                 [
-                  "@babel/preset-env",
+                  require.resolve("@babel/preset-env"),
                   // https://github.com/babel/babel/blob/master/packages/babel-preset-env/data/plugins.json#L32
                   {
                     targets: { browsers: ["chrome >= 47"] },
@@ -240,18 +240,18 @@ module.exports = (webpackEnv) => {
                     corejs: 3,
                   },
                 ],
-                "@babel/preset-typescript",
-                "@babel/preset-react",
+                require.resolve("@babel/preset-typescript"),
+                require.resolve("@babel/preset-react"),
               ],
               plugins: [
-                ["@babel/plugin-proposal-decorators", { legacy: true }],
-                ["@babel/plugin-proposal-class-properties", { loose: true }],
-                ["@babel/plugin-proposal-private-methods", { loose: true }],
+                [require.resolve("@babel/plugin-proposal-decorators"), { legacy: true }],
+                [require.resolve("@babel/plugin-proposal-class-properties"), { loose: true }],
+                [require.resolve("@babel/plugin-proposal-private-methods"), { loose: true }],
                 [
-                  "@babel/plugin-proposal-private-property-in-object",
+                  require.resolve("@babel/plugin-proposal-private-property-in-object"),
                   { loose: true },
                 ],
-                "@babel/plugin-syntax-dynamic-import",
+                require.resolve("@babel/plugin-syntax-dynamic-import"),
               ],
             },
           },
