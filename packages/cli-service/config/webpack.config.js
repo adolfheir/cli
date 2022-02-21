@@ -60,7 +60,7 @@ module.exports = (webpackEnv) => {
         test: /\.svg$/,
         use: [
           {
-            loader: "@svgr/webpack",
+            loader: require.resolve("@svgr/webpack"),
             options: {
               prettier: false,
               svgo: false,
@@ -72,7 +72,7 @@ module.exports = (webpackEnv) => {
             },
           },
           {
-            loader: "file-loader",
+            loader: require.resolve("file-loader"),
             options: {
               name: "static/media/[name].[hash].[ext]",
             },
@@ -244,11 +244,22 @@ module.exports = (webpackEnv) => {
                 require.resolve("@babel/preset-react"),
               ],
               plugins: [
-                [require.resolve("@babel/plugin-proposal-decorators"), { legacy: true }],
-                [require.resolve("@babel/plugin-proposal-class-properties"), { loose: true }],
-                [require.resolve("@babel/plugin-proposal-private-methods"), { loose: true }],
                 [
-                  require.resolve("@babel/plugin-proposal-private-property-in-object"),
+                  require.resolve("@babel/plugin-proposal-decorators"),
+                  { legacy: true },
+                ],
+                [
+                  require.resolve("@babel/plugin-proposal-class-properties"),
+                  { loose: true },
+                ],
+                [
+                  require.resolve("@babel/plugin-proposal-private-methods"),
+                  { loose: true },
+                ],
+                [
+                  require.resolve(
+                    "@babel/plugin-proposal-private-property-in-object"
+                  ),
                   { loose: true },
                 ],
                 require.resolve("@babel/plugin-syntax-dynamic-import"),
