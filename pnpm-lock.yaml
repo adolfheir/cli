@@ -48,6 +48,7 @@ importers:
       '@houqi/cli-utils': workspace:^1.0.0
       '@pmmmwh/react-refresh-webpack-plugin': ^0.5.4
       '@svgr/webpack': ^6.2.1
+      '@vue/preload-webpack-plugin': ^2.0.0
       babel-loader: ^8.2.2
       browserslist: ^4.19.1
       case-sensitive-paths-webpack-plugin: ^2.4.0
@@ -99,6 +100,7 @@ importers:
       '@houqi/cli-utils': link:../cli-utils
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.4_c9d7d4a77b192c76978c5e4fda4d054f
       '@svgr/webpack': 6.2.1
+      '@vue/preload-webpack-plugin': 2.0.0_b492f9a755460bd03c9edcbecbd324b5
       babel-loader: 8.2.3_9351ded4f79a023849d74b5df047d562
       browserslist: 4.19.3
       case-sensitive-paths-webpack-plugin: 2.4.0
@@ -2045,6 +2047,17 @@ packages:
     resolution: {integrity: sha512-ahRJZquUYCdOZf/rCsWg88S0/+cb9wazUBHv6HZEe3XdYaBe2zr/slM8J28X07Hn88Pnm4ezo7N8/ofnOgrPVQ==, tarball: '@types/ws/-/@types/ws-8.2.3/0bca6b03ba2f41e0fab782d4a573fe284aa907ae.tgz'}
     dependencies:
       '@types/node': 17.0.19
+    dev: false
+
+  /@vue/preload-webpack-plugin/2.0.0_b492f9a755460bd03c9edcbecbd324b5:
+    resolution: {integrity: sha512-RoorRB50WehYbsiWu497q8egZBYlrvOo9KBUG41uth4O023Cbs+7POLm9uw2CAiViBAIhvpw1Y4w4i+MZxOfXw==, tarball: __tarballs/@vue/preload-webpack-plugin/2.0.0/__path/@vue/preload-webpack-plugin/-/preload-webpack-plugin-2.0.0/a43bfc087e91f7d0efb0086100148f4b16437b68.tgz}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      html-webpack-plugin: ^5.0.0 || ^4.5.1
+      webpack: ^5.20.0 || ^4.1.0
+    dependencies:
+      html-webpack-plugin: 5.5.0_webpack@5.69.1
+      webpack: 5.69.1_esbuild@0.14.23
     dev: false
 
   /@webassemblyjs/ast/1.11.1:
@@ -4101,7 +4114,7 @@ packages:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=, tarball: fs.realpath/-/fs.realpath-1.0.0/1504ad2523158caa40db4a2787cb01411994ea4f.tgz}
 
   /fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: __tarballs/fsevents/2.3.2/__path/npm/fsevents/-/fsevents-2.3.2/8a526f78b8fdf4623b709e0b975c52c24c02fd1a.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: __tarballs/fsevents/2.3.2/__path/fsevents/-/fsevents-2.3.2/8a526f78b8fdf4623b709e0b975c52c24c02fd1a.tgz}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true

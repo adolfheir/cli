@@ -12,6 +12,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PreloadWebpackPlugin = require("@vue/preload-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
@@ -386,10 +387,24 @@ module.exports = (webpackEnv) => {
         publicPath: paths.publicUrlOrPath,
       }),
       new HtmlWebpackPlugin({
+        ...env,
+        BUILD_TIME: dayjs().format("YYYY-MM-DD H:mm:ss"),
         template: paths.appHtml,
-        inject: true,
-        buildTime: dayjs().format("YYYY-MM-DD H:mm:ss"),
-        version: `${env["VERSION"]}`,
+        inject: "body",
+        minify: {
+          collapseWhitespace: true,
+          keepClosingSlash: true,
+          removeComments: false,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true,
+        },
+      }),
+      new PreloadWebpackPlugin({
+        rel: "preload",
+        as: "font",
+        fileWhitelist: [/\.(woff|woff2|eot|ttf)?$/],
       }),
       new CopyPlugin({
         patterns: [
