@@ -1,0 +1,33 @@
+// @ts-nocheck
+import React from 'react';
+
+const prefixCls = "houqi";
+
+interface IconProps extends React.SVGAttributes<SVGElement> {
+  style?: React.CSSProperties;
+  spin?: boolean;
+  isIcon?: boolean;
+}
+export const {{ iconName }} = React.forwardRef<React.RefAttributes<unknown>, IconProps>((iconProps, ref) => {
+  const { spin, className } = iconProps;
+  const props = {
+    ref,
+    ...iconProps,
+    className: `${className ? className + ' ' : ''}${prefixCls}-icon ${prefixCls}{{iconClassName}}`,
+  };
+
+  if (spin) {
+    props.className = `${props.className} ${prefixCls}-icon-loading`;
+  }
+  delete props.spin;
+  delete props.isIcon;
+
+  return {{ svg }};
+})
+
+{{ iconName }}.defaultProps = {
+  isIcon: true,
+}
+{{ iconName }}.displayName = '{{ iconName }}';
+
+export default {{ iconName }};

@@ -1,24 +1,33 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env PORT=8001 houqi-cli-service start",
-    "build": "houqi-cli-service build",
+    "start": "cross-env PORT=31812 houqi-cli-service start",
+    "build": "npm-run-all build:* && houqi-cli-service build",
     "analyzer": "cross-env ENABLE_ANALYZER=1 houqi-cli-service build",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,sass,md,json}'"
+    "prettier": "prettier --config .prettierrc  --write './src/**/*.{js,jsx,tsx,ts,sass,md,json}'",
+    "build:font": "node ./deploy/generateFont.js"
   },
   "dependencies": {
-    "@houqi/cli-service": "^1.0.9",
+    "@houqi/cli-service": "^1.0.6",
     "classnames": "^2.3.1",
     "cross-env": "^7.0.3",
     "loglevel": "^1.8.0",
     "react": "17.x",
-    "react-dom": "17.x"
+    "react-dom": "17.x",
+    "dayjs": "^1.10.7"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "prettier": "^2.2.0",
-    "typescript": "^4.1.2"
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/uuid": "^8.3.4",
+    "core-js": "^3.21.1",
+    "cross-env": "^7.0.3",
+    "fontmin": "^0.9.9",
+    "fs-extra": "^10.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   },
   "browserslist": [
     "> 1%",
