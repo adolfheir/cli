@@ -1,0 +1,1 @@
+此目录文件会自动copy到build/public下
