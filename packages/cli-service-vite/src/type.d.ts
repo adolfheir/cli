@@ -1,1 +1,1 @@
-declare module '@houqi/cli-utils';
+declare module '@ihouqi/cli-utils';

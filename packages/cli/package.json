@@ -1,5 +1,5 @@
 {
-  "name": "@houqi/cli",
+  "name": "@ihouqi/cli",
   "version": "1.2.0",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
@@ -29,7 +29,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@houqi/cli-utils": "workspace:^1.0.0",
+    "@ihouqi/cli-utils": "workspace:^1.0.0",
     "commander": "^8.1.0",
     "envinfo": "^7.8.1",
     "glob": "^7.2.0",

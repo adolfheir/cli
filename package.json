@@ -6,7 +6,7 @@
   "author": "cyh <1428899467@qq.com>",
   "license": "MIT",
   "scripts": {
-    "build":"pnpm  --filter '@houqi/*' run build ",
+    "build":"pnpm  --filter '@ihouqi/*' run build ",
     "clean": "pnpm -r exec rm -rf node_modules ",
     "publish": "changeset publish"
   },

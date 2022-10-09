@@ -15,7 +15,7 @@ process.on("unhandledRejection", (err) => {
   throw err;
 });
 
-const { spawn } = require("@houqi/cli-utils");
+const { spawn } = require("@ihouqi/cli-utils");
 const args = process.argv.slice(2);
 
 const enableScrips = ["build", , "start",];

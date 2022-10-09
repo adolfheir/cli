@@ -1,3 +1,3 @@
  ## readme
 
-pnpm i @test/utils -r --filter @houqi/cli-service
+pnpm i @test/utils -r --filter @ihouqi/cli-service

@@ -4,7 +4,7 @@ process.env.NODE_ENV = "development";
 
 const webpack = require("webpack");
 const WebpackDevServer = require("webpack-dev-server");
-const { openBrowser } = require("@houqi/cli-utils");
+const { openBrowser } = require("@ihouqi/cli-utils");
 const configFactory = require("../config/webpack.config");
 
 const webpackConfig = configFactory("development");

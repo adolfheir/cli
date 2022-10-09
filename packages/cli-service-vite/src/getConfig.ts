@@ -9,7 +9,7 @@ import VitePluginInjectPreload from 'vite-plugin-inject-preload'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { visualizer } from "rollup-plugin-visualizer";
 import checker from 'vite-plugin-checker'
-import { loadModule } from "@houqi/cli-utils"
+import { loadModule } from "@ihouqi/cli-utils"
 import { appDirectory, userConfig } from "./path"
 
 const ENV = {

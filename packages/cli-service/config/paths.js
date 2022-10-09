@@ -71,7 +71,7 @@ module.exports = {
   appWebpackCache: resolveApp('node_modules/.cache'),
   swSrc: resolveModule(resolveApp, "src/service-worker"),
   publicUrlOrPath: "/",
-  overWriteFile: resolveApp("houqi.config.ts"),
+  overWriteFile: resolveApp("ihouqi.config.ts"),
   ownPath: resolveOwn("."),
   ownNodeModules: resolveOwn("node_modules"), // This is empty on npm 3
   appTypeDeclarations: resolveApp("src/react-app-env.d.ts"),

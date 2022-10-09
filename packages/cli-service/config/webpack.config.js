@@ -7,7 +7,7 @@ const dartSass = require("sass");
 const WebpackBar = require("webpackbar");
 const { isFunction } = require("lodash");
 const nodeLibs = require("node-libs-browser");
-const { loadModule } = require("@houqi/cli-utils");
+const { loadModule } = require("@ihouqi/cli-utils");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -510,14 +510,14 @@ module.exports = (webpackEnv) => {
     },
 
     externals: {
-      ["lodash"]: "window['@houqi/libs'].lodash",
-      ["react"]: "window['@houqi/libs'].React",
-      ["react-dom"]: "window['@houqi/libs'].ReactDOM",
-      ["react-router-dom"]: "window['@houqi/libs'].ReactRouterDom",
-      ["moment"]: "window['@houqi/libs'].moment",
-      ["@houqi/components"]: "window['@houqi/libs'].houqiComponents",
-      ["i18next"]: "window['@houqi/libs'].i18next",
-      ["react-i18next"]: "window['@houqi/libs'].reactI18next",
+      ["lodash"]: "window['@ihouqi/libs'].lodash",
+      ["react"]: "window['@ihouqi/libs'].React",
+      ["react-dom"]: "window['@ihouqi/libs'].ReactDOM",
+      ["react-router-dom"]: "window['@ihouqi/libs'].ReactRouterDom",
+      ["moment"]: "window['@ihouqi/libs'].moment",
+      ["@ihouqi/components"]: "window['@ihouqi/libs'].houqiComponents",
+      ["i18next"]: "window['@ihouqi/libs'].i18next",
+      ["react-i18next"]: "window['@ihouqi/libs'].reactI18next",
     },
   };
 

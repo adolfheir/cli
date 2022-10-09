@@ -1,5 +1,5 @@
 {
-  "name": "@houqi/cli-service-vite",
+  "name": "@ihouqi/cli-service-vite",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.19.3",
-    "@houqi/cli-utils": "workspace:^1.0.0",
+    "@ihouqi/cli-utils": "workspace:^1.0.0",
     "@types/lodash": "^4.14.186",
     "@vitejs/plugin-react": "^2.1.0",
     "dayjs": "^1.10.7",

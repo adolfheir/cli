@@ -3,13 +3,13 @@
 // Check node version before requiring/doing anything else
 // The user may be on a very old node version
 
-const { chalk } = require("@houqi/cli-utils");
+const { chalk } = require("@ihouqi/cli-utils");
 const leven = require("leven");
 
 const program = require("commander");
 
 program
-  .version(`@houqi/cli ${require("../package").version}`)
+  .version(`@ihouqi/cli ${require("../package").version}`)
   .usage("<command> [options]");
 
 program
@@ -30,7 +30,7 @@ program
           System: ["OS", "CPU"],
           Binaries: ["Node", "Yarn", "npm"],
           Browsers: ["Chrome", "Edge", "Firefox", "Safari"],
-          npmGlobalPackages: ["@houqi/cli"],
+          npmGlobalPackages: ["@ihouqi/cli"],
         },
         {
           showNotFound: true,

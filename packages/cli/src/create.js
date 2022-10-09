@@ -2,7 +2,7 @@ const path = require("path");
 const mkdirp = require("mkdirp");
 const glob = require("glob")
 const { statSync, copyFileSync, writeFileSync } = require("fs");
-const { chalk } = require("@houqi/cli-utils");
+const { chalk } = require("@ihouqi/cli-utils");
 //模板路径
 const tplPath = path.join(__dirname, "../templates");
 
