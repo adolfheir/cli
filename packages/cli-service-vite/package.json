@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "houqi-cli-service": "bin/houqi-cli-service.js"
+    "ihouqi-cli-service": "bin/ihouqi-cli-service.js"
   },
   "files": [
     "bin",

@@ -7,7 +7,7 @@
   "license": "ISC",
   "main": "lib/cli.js",
   "bin": {
-    "houqi-cli": "bin/houqi-cli.js"
+    "ihouqi-cli": "bin/ihouqi-cli.js"
   },
   "directories": {
     "lib": "lib",
