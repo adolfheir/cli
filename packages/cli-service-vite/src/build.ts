@@ -5,9 +5,11 @@ import { build } from 'vite';
 import getConfig from './getConfig';
 
 
-export async function dev() {
+async function run() {
 
   let viteConfig = await getConfig()
   await build(viteConfig)
 
 }
+
+run

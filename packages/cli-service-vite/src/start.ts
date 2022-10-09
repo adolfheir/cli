@@ -7,7 +7,7 @@ import getConfig from './getConfig';
 import { get } from "lodash"
 
 
-export async function dev() {
+async function run() {
 
   let viteConfig = await getConfig()
 
@@ -19,5 +19,6 @@ export async function dev() {
 
   await server.listen()
   server.printUrls()
-
 }
+
+run()

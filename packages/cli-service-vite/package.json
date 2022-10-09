@@ -8,6 +8,7 @@
     "houqi-cli-service": "bin/houqi-cli-service.js"
   },
   "files": [
+    "bin",
     "dist",
     "src"
   ],

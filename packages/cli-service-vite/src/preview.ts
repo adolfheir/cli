@@ -6,7 +6,7 @@ process.env.VITE_PREVIEW = "true";
 import { preview as vitePreview } from 'vite'
 import getConfig from './getConfig';
 
-export async function preview() {
+async function run() {
 
   let viteConfig = await getConfig()
 
@@ -21,3 +21,5 @@ export async function preview() {
 
   previewServer.printUrls()
 }
+
+run()
