@@ -1,8 +1,8 @@
 
 import prettier from "./prettier"
-import top1000 from "./topWord"
+import topWord from "./topWord"
 
 module.exports = {
   prettier,
-  top1000
+  topWord
 };

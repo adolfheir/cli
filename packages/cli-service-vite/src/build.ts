@@ -8,8 +8,14 @@ import getConfig from './getConfig';
 async function run() {
 
   let viteConfig = await getConfig()
-  await build(viteConfig)
+
+  try {
+    let stats = await build(viteConfig)
+    console.log("build stats", stats)
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
 
 }
-
-run
+run()

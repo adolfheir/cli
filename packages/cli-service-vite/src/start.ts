@@ -4,7 +4,6 @@ process.env.NODE_ENV = "development";
 
 import { createServer } from 'vite';
 import getConfig from './getConfig';
-import { get } from "lodash"
 
 
 async function run() {
@@ -14,7 +13,6 @@ async function run() {
   const server = await createServer({
     ...viteConfig,
     configFile: false,
-    server: { ...get(viteConfig, "server", {}), middlewareMode: 'html' },
   });
 
   await server.listen()
