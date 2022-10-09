@@ -1,0 +1,37 @@
+{
+  "name": "@houqi/cli-service-vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "houqi-cli-service": "bin/houqi-cli-service.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "pnpm build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@houqi/cli-utils": "workspace:^1.0.0",
+    "@types/lodash": "^4.14.186",
+    "@vitejs/plugin-react": "^2.1.0",
+    "dayjs": "^1.10.7",
+    "lodash": "^4.17.21",
+    "rollup-plugin-visualizer": "^5.8.2",
+    "vite": "^3.1.6",
+    "vite-plugin-checker": "^0.5.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-inject-preload": "^1.1.0",
+    "vite-plugin-load-css-module": "^0.1.4",
+    "vite-plugin-svgr": "^2.2.1"
+  }
+}
