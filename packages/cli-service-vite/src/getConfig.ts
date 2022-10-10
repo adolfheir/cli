@@ -16,17 +16,17 @@ const ENV = {
   CI_BUILD_NUMBER: get(process.env, "CI_BUILD_NUMBER", 0),
   GIT_BRANCH: get(process.env, "GIT_BRANCH", 0),
   GIT_COMMIT_SHORT: get(process.env, "GIT_COMMIT_SHORT",),
-  ENABLE_ANALYZER: get(process.env, "ENABLE_ANALYZER", false),
+  IS_PREVIEW: get(process.env, "IS_PREVIEW", false),
 }
 
-const showAnalyze = !!ENV.ENABLE_ANALYZER
+const IS_PREVIEW = !!ENV.IS_PREVIEW
 
 // https://vitejs.dev/config/
 const baseConfig: UserConfig = {
   build: {
     outDir: './build',
     manifest: true,
-    sourcemap: showAnalyze,
+    sourcemap: IS_PREVIEW,
     rollupOptions: {
       output: {
         // 用于从入口点创建的块的打包输出格式[name]表示文件名,[hash]表示该文件内容hash值
@@ -98,7 +98,7 @@ const baseConfig: UserConfig = {
         },
       ],
     }),
-    ...showAnalyze ? [visualizer({
+    ...IS_PREVIEW ? [visualizer({
       filename: './build/report-rollup-plugin-visualizer.html',
       brotliSize: true,
     })] : []
@@ -119,7 +119,8 @@ const baseConfig: UserConfig = {
       // '@materia': "/src/common/materia",
       // '@pages': "/src/pages",
     }
-  }
+  },
+  ...IS_PREVIEW ? { mode: "preview" } : {}
 }
 
 const getConfig = async () => {
