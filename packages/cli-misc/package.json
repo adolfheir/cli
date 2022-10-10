@@ -1,5 +1,5 @@
 {
-  "name": "@ihouqi/cli-config",
+  "name": "@ihouqi/cli-misc",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "core-js": "^3.20.2",
+    "fontmin": "^0.9.9",
+    "fs-extra": "^10.1.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.1.1",
     "prettier-plugin-packagejson": "^2.3.0",
