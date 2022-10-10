@@ -66,7 +66,7 @@ const baseConfig: UserConfig = {
 
     createHtmlPlugin({
       template: 'public/index.html',
-      entry: "/src/index.tsx",
+      // entry: "/src/index.tsx",
       minify: {
         collapseWhitespace: true,
         keepClosingSlash: true,
