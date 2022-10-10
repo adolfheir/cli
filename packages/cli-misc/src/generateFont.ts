@@ -1,7 +1,7 @@
 /* todo:入口文件 & spain样式 &demo */
 import * as fs from "fs-extra"
 import * as path from "path"
-import * as Fontmin from "fontmin"
+import Fontmin from "fontmin"
 // import extraWord from "./extraWord"
 
 export interface Item {
