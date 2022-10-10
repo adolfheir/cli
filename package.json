@@ -1,12 +1,12 @@
 {
   "name": "cli",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://e.coding.net/ihouqi/fe/cli.git",
-  "author": "cyh <1428899467@qq.com>",
   "license": "MIT",
+  "author": "cyh <1428899467@qq.com>",
+  "main": "index.js",
   "scripts": {
-    "build":"pnpm  --filter '@ihouqi/*' run build ",
+    "build": "pnpm  --filter '@ihouqi/*' run build ",
     "clean": "pnpm -r exec rm -rf node_modules ",
     "publish": "changeset publish"
   },
