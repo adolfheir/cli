@@ -11,7 +11,7 @@ async function run() {
 
   try {
     let stats = await build(viteConfig)
-    console.log("build stats", stats)
+    // console.log("build stats", stats)
   } catch (error) {
     console.error(error)
     throw error

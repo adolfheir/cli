@@ -1,6 +1,6 @@
 {
   "name": "@ihouqi/cli-service-vite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +28,7 @@
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
     "rollup-plugin-visualizer": "^5.8.2",
+    "sass": "^1.38.1",
     "vite": "^3.1.6",
     "vite-plugin-checker": "^0.5.1",
     "vite-plugin-html": "^3.2.0",
